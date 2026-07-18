@@ -1,18 +1,40 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>🔥 Bhai Ka TikTok 🔥</title>
 </head>
-<body style="background:black; color:white; text-align:center; font-family:sans-serif;">
+<body style="background:black; color:white; text-align:center; padding:50px; font-family:Arial;">
     <h1>🔥 Bhai Ka TikTok 🔥</h1>
-    <img src="photo.jpg" style="width:150px; height:150px; border-radius:50%; border:3px solid red; margin:20px;">
+    <img src="photo.jpg" style="width:150px; height:150px; border-radius:50%; border:3px solid white;">
     <h2>@Bhai_ka_TikTok</h2>
     
-    <audio controls autoplay loop style="width:80%;">
+    <audio controls autoplay loop style="width:80%; margin-top:20px;">
         <source src="song.mp3" type="audio/mpeg">
     </audio>
     
-    <p style="font-size:24px; margin-top:20px;">BAJ GAYA BHAI 🔥</p>
+    <p style="font-size:24px; margin-top:20px;"><b>Welcome to Bhai ka TikTok</b></p>
+
+    <!-- ATTITUDE LESSON BOX START -->
+    <div id="attitudeBox" style="background:#111; color:#0f0; padding:20px; margin:20px; border-radius:10px; border:2px solid #0f0; text-align:center;">
+      <h2>🔥 AAJ KA ATTITUDE LESSON 🔥</h2>
+      <p id="quote" style="font-size:22px; margin:15px 0;"><b>Loading...</b></p>
+      <p id="matlab"></p>
+      <p id="use"></p>
+    </div>
+
+    <script>
+    const lessons = [
+      { quote: "you hate me?? HAHAHA not my problem", matlab: "Matlab: Teri nafrat tera masla hai, mera nahi", use: "Use karo jab: Koi neecha dikhaye" },
+      { quote: "I'm not arguing, I'm just explaining why I'm right", matlab: "Matlab: Behas nahi, sach bata raha hun", use: "Use karo jab: Koi bole 'tu behas karta hai'" },
+      { quote: "Your opinion was not in my to-do list", matlab: "Matlab: Teri raay ki zarurat nahi thi", use: "Use karo jab: Koi faltu advice de" }
+    ];
+    const day = new Date().getDate();
+    const todayLesson = lessons[day % lessons.length];
+    document.getElementById("quote").innerHTML = "<b>\"" + todayLesson.quote + "\"</b>";
+    document.getElementById("matlab").innerText = todayLesson.matlab;
+    document.getElementById("use").innerText = todayLesson.use;
+    </script>
+    <!-- ATTITUDE LESSON BOX END -->
+
 </body>
 </html>
